@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #007bff;
+}
+
+.logout {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.logout:hover {
+    background-color: #d32f2f;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.car-list, .rental-list, .history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.car-item, .rental-item, .history-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.car-item img {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+}
+
+.car-item div, .rental-item div, .history-item div {
+    overflow: hidden; /* Ensures the text wraps correctly */
+}
+
+.car-item h4, .rental-item h4, .history-item h4 {
+    margin: 0 0 10px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* style.css */
+
+.car-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.car-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.car-details {
+    background-color: #f9f9f9;
+}
+
+.car-details p {
+    margin: 5px 0;
+}
+
+.rent-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
