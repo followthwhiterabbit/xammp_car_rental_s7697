@@ -38,6 +38,7 @@ $past_rentals = $conn->query("SELECT cars.model, rentals.rental_date, rentals.re
 <html>
 <head>
     <title>User Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h2>Welcome, <?php echo htmlspecialchars($username); ?></h2>
@@ -46,7 +47,9 @@ $past_rentals = $conn->query("SELECT cars.model, rentals.rental_date, rentals.re
     <h3>Available Cars</h3>
     <ul>
         <?php while ($car = $available_cars->fetch_assoc()): ?>
-            <li>
+            <li style="margin-left:50%">
+                <img src="<?php echo htmlspecialchars($car['image_url']); ?>" alt="<?php echo htmlspecialchars($car['model']); ?>" style="width:100px;height:auto;">
+                <br>
                 <?php echo htmlspecialchars($car['model']); ?>
                 <form method="post" action="dashboard.php">
                     <input type="hidden" name="car_id" value="<?php echo $car['id']; ?>">

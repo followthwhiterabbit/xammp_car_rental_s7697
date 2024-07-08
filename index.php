@@ -1,36 +1,46 @@
-<?php
+<?php 
 session_start();
-require 'db.php';
+require 'db.php'; 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = $_POST['password']; 
 
-    $stmt = $conn->prepare('SELECT * FROM users WHERE username = ? AND password = ?');
+    $stmt = $conn->prepare('SELECT * FROM users WHERE username = ? AND password = ?'); 
     $stmt->bind_param('ss', $username, $password);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $stmt->execute(); 
+    $result = $stmt->get_result(); 
 
-    if ($result->num_rows > 0) {
-        $_SESSION['username'] = $username;
+    if ($result->num_rows > 0)
+    {
+        $_SESSION['username'] = $username; 
 
-        if ($username == 'admin') {
+        if($username == 'admin')
+        {
             header('Location: admin_dashboard.php');
-        } else {
-            header('Location: dashboard.php');
         }
-        exit;
-    } else {
-        $error = 'Invalid login credentials';
+        else{
+            header('Location: dashboard.php');
+
+        }
+
+        exit; 
+        
     }
+    
 }
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Car Rental Login</title>
+    <title>Car Rental Login Page</title>
 </head>
+
 <body>
     <h2>Login</h2>
     <form method="post" action="index.php">
@@ -39,7 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label>Password:</label>
         <input type="password" name="password" required><br>
         <button type="submit">Login</button>
-    </form>
-    <?php if (isset($error)) echo "<p>$error</p>"; ?>
+</form>
+<?php if (isset($error)) echo "<p>$error</p>"; ?>
+
 </body>
+
+
+
 </html>
+

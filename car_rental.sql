@@ -21,6 +21,12 @@ INSERT INTO cars (model, status)  VALUES ('Toyota Yarris', 'available');
 INSERT INTO cars (model, status)  VALUES ('Honda Accord',  'available');
 INSERT INTO cars (model, status)  VALUES ('Ford Mustang', 'available');
 
+ALTER TABLE cars ADD COLUMN image_url VARCHAR(255);
+
+
+UPDATE cars SET image_url = 'img/toyota_yarris.jpg' WHERE model = 'Toyota Yarris';
+UPDATE cars SET image_url = 'img/honda_accord.jpg' WHERE model = 'Honda Accord';
+UPDATE cars SET image_url = 'img/ford_mustang.jpeg' WHERE model = 'Ford Mustang';
 
 CREATE TABLE rentals(
     id INT AUTO_INCREMENT PRIMARY KEY, 
