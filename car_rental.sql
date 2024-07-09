@@ -17,6 +17,8 @@ CREATE TABLE cars(
     status ENUM('available', 'rented') DEFAULT 'available'
 );
 
+ALTER TABLE cars MODIFY status VARCHAR(10);
+
 INSERT INTO cars (model, status)  VALUES ('Toyota Yarris', 'available'); 
 INSERT INTO cars (model, status)  VALUES ('Honda Accord',  'available');
 INSERT INTO cars (model, status)  VALUES ('Ford Mustang', 'available');
