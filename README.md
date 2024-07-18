@@ -1,5 +1,15 @@
 # xammp_car_rental_s7697
 
+
+## How to launch it 
+
+## 1 - run mysql server with administrator or root privileges
+## 2 - make sure to load the car_rental database inside the mysql server with insert option 
+## 3 - create a folder inside htdocs directory with the name of your preference 
+## 4 - clone or copy the files inside of this repository to the previously created directory 
+## 5 - reach the website from localhost/{the name of the file}
+
+
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
     <div style="text-align: center; margin: 10px;">
         <img src="tutorial_images/admin_car_info_expand.png" width="275">
